@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SPEAK-IT Translator</title>
+    <style>
+        body { 
+            background: linear-gradient(135deg, #6a11cb, #2575fc); 
+            font-family: Arial;  
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+            overflow: hidden; 
+        }
+
+        .card { 
+            position: relative; 
+            z-index: 1; 
+        }
+
+        
+        .animated-bg { 
+            position: fixed;      
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            z-index: 0;           
+            pointer-events: none; 
+        }
+
+        .animated-bg span {
+            position: absolute;
+            white-space: nowrap;
+            font-size: 24px;
+            font-weight: bold;
+            opacity: 0.2;
+            color: #ffffff;
+            animation: float linear infinite;
+        }
+
+        
+        .animated-bg span:nth-child(1)  { top: 10%; left: -300px; animation-duration: 15s; animation-delay: 0s; }
+        .animated-bg span:nth-child(2)  { top: 25%; left: -300px; animation-duration: 15s; animation-delay: 2s; }
+        .animated-bg span:nth-child(3)  { top: 40%; left: -250px; animation-duration: 15s; animation-delay: 4s; }
+        .animated-bg span:nth-child(4)  { top: 55%; left: -350px; animation-duration: 15s; animation-delay: 6s; }
+        .animated-bg span:nth-child(5)  { top: 70%; left: -400px; animation-duration: 15s; animation-delay: 1s; }
+        .animated-bg span:nth-child(6)  { top: 35%; left: -150px; animation-duration: 15s; animation-delay: 3s; }
+        .animated-bg span:nth-child(7)  { top: 50%; left: -200px; animation-duration: 15s; animation-delay: 5s; }
+        .animated-bg span:nth-child(8)  { top: 15%; left: -250px; animation-duration: 15s; animation-delay: 7s; }
+        .animated-bg span:nth-child(9)  { top: 60%; left: -300px; animation-duration: 15s; animation-delay: 2s; }
+        .animated-bg span:nth-child(10) { top: 30%; left: -350px; animation-duration: 15s; animation-delay: 4s; }
+        .animated-bg span:nth-child(11) { top: 45%; left: -250px; animation-duration: 15s; animation-delay: 6s; }
+        .animated-bg span:nth-child(12) { top: 20%; left: -400px; animation-duration: 15s; animation-delay: 3s; }
+        .animated-bg span:nth-child(13) { top: 75%; left: -300px; animation-duration: 15s; animation-delay: 5s; }
+
+        
+        @keyframes float {
+            0%   { transform: translateX(0) translateY(0); }
+            50%  { transform: translateX(150vw) translateY(10px); }
+            100% { transform: translateX(150vw) translateY(0); }
+        }
+
+        
+        .card {
+            position: relative;
+            z-index: 1; 
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 20px;
+            width: 450px;
+            color: #1a1a1a;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        textarea, select, button {
+            width: 90%;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc; 
+            font-size: 14px;
+        }
+
+        textarea {
+            background: #f5f5f5;  
+            color: #1a1a1a;
+            height: 80px;
+            width: 430px;
+        }
+
+        button {
+            background: #6a11cb;    
+            color: #ffffff;          
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #2575fc;    
+        }
+
+        button:active {
+            transform: scale(0.95);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+        }
+
+        .output {
+            margin-top: 15px;
+            background: #f5f5f5;
+            color: #1a1a1a;
+        }
+
+        
+        h2 {
+            font-family: "Comic Sans MS", cursive;
+            font-size: 28px;
+            text-align: center;
+            color: #6a11cb; 
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="animated-bg">
+        <span>SPEAK-IT</span>
+        <span>हिंदी</span>
+        <span>French</span>
+        <span>Español</span>
+        <span>Deutsch</span>
+        <span>English</span>
+        <span>தமிழ்</span>
+        <span>हिंदी</span>
+        <span>한국어</span>       
+        <span>తెలుగు</span>       
+        <span>中文</span>          
+        <span>ไทย</span>          
+        <span>Afrikaans</span>    
+    </div>
+
+    <div class="card">
+        <h2>SPEAK-IT</h2>
+        <textarea id="inputText" placeholder="Enter text..."></textarea>
+        <select id="language">
+            <option value="" disabled selected>Select Language</option>
+            <option value="tamil">Tamil</option>
+            <option value="hindi">Hindi</option>
+            <option value="french">French</option>
+            <option value="spanish">Spanish</option>
+            <option value="german">German</option>
+            <option value="english">English</option>
+        </select>
+        <button onclick="translateText()">Translate</button>
+        <textarea id="outputText" class="output" readonly placeholder="Translation will appear here..."></textarea>
+       
+
+    </div>
+
+    <script>
+async function translateText() {
+    const text = document.getElementById("inputText").value;
+    const language = document.getElementById("language").value;
+
+    const response = await fetch("/translate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text, language })
+    });
+
+    const data = await response.json();
+    const translatedText = data.translated_text;
+
+    document.getElementById("outputText").value = translatedText;
+
+    speakText(translatedText, language); 
+}
+
+
+function speakText(text, lang) {
+    const speech = new SpeechSynthesisUtterance(text);
+
+    const langMap = {
+        tamil: "ta-IN",
+        hindi: "hi-IN",
+        french: "fr-FR",
+        spanish: "es-ES",
+        german: "de-DE",
+        english: "en-US"
+    };
+
+    speech.lang = langMap[lang] || "en-US";
+    speech.rate = 1;
+    speech.pitch = 1;
+
+    window.speechSynthesis.cancel(); 
+    window.speechSynthesis.speak(speech);
+}
+</script>
+
+</body>
+</html>
