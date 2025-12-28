@@ -59,7 +59,9 @@ SPEAK-IT/
   - Internship and academic projects
 
 ## Interface
-<img width="1883" height="1003" alt="image" src="https://github.com/user-attachments/assets/55a34398-c2db-46a6-9f10-44ccbd8b7477" /> 
+<img width="918" height="957" alt="image" src="https://github.com/user-attachments/assets/8d1def8e-f8d1-4438-aaee-02208e2d0ab0" />
+
+
 
 <img width="922" height="962" alt="image" src="https://github.com/user-attachments/assets/5a3e8edf-7a57-45e2-b2ac-72651c4d2cd8" />
 
