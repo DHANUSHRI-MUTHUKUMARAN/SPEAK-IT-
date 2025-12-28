@@ -59,9 +59,12 @@ SPEAK-IT/
   - Internship and academic projects
 
 ## Interface
-<img width="1883" height="1003" alt="image" src="https://github.com/user-attachments/assets/55a34398-c2db-46a6-9f10-44ccbd8b7477" /> <img width="1878" height="965" alt="image" src="https://github.com/user-attachments/assets/90c423dc-e8a6-4374-bf4c-95033f9f43a8" />
+<img width="1883" height="1003" alt="image" src="https://github.com/user-attachments/assets/55a34398-c2db-46a6-9f10-44ccbd8b7477" /> 
 
- ##Author
+<img width="922" height="962" alt="image" src="https://github.com/user-attachments/assets/5a3e8edf-7a57-45e2-b2ac-72651c4d2cd8" />
+
+
+## Author
   Dhanushri Muthukumaran
   B.Tech – Artificial Intelligence & Data Science
   St. Joseph’s College of Engineering
