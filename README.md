@@ -4,27 +4,20 @@ SPEAK-IT is an AI-powered language translation application that enables real-tim
 
 ## Features
 
-Real-time text translation
+- Real-time text translation
+- AI-powered translation engine
+- Simple and interactive web interface
+- Fast and lightweight Flask backend
 
-AI-powered translation engine
+## Tech Stack
 
-Simple and interactive web interface
+- Programming Language: Python
+- Framework: Flask
+- Frontend: HTML, CSS
+- AI / NLP: Translation model/library
+- Version Control: Git & GitHub
 
-Fast and lightweight Flask backend
-
-🛠️ Tech Stack
-
-Programming Language: Python
-
-Framework: Flask
-
-Frontend: HTML, CSS
-
-AI / NLP: Translation model/library
-
-Version Control: Git & GitHub
-
-📁 Project Structure
+## Project Structure
 SPEAK-IT/
 │
 ├── app.py                 # Main Flask application
@@ -34,68 +27,41 @@ SPEAK-IT/
 ├── .gitignore
 ├── README.md
 
-▶️ How to Run the Project
-1. Clone the Repository
-git clone https://github.com/DHANUSHRI-MUTHUKUMARAN/SPEAK-IT-.git
-cd SPEAK-IT-
+## How to Run the Project
 
-2. Create Virtual Environment
-python -m venv venv
+  1. Clone the Repository
+    git clone https://github.com/DHANUSHRI-MUTHUKUMARAN/SPEAK-IT-.git
+    cd SPEAK-IT-
+  
+  2. Create Virtual Environment
+    python -m venv venv
+    Activate it:
+    Windows
+      venv\Scripts\activate
+    Mac / Linux
+      source venv/bin/activate
+  
+  3. Install Dependencies
+    pip install flask
+    (Install any additional libraries if used)
+    
+  4. Run the Application
+    python app.py
+    Open browser and visit:
+      http://127.0.0.1:5000/
 
+## Use Case
 
-Activate it:
+  This application can be used for:
+  - Breaking language barriers
+  - Learning and practicing new languages
+  - Demonstrating AI & NLP concepts
+  - Internship and academic projects
 
-Windows
-
-venv\Scripts\activate
-
-
-Mac / Linux
-
-source venv/bin/activate
-
-3. Install Dependencies
-pip install flask
-
-
-(Install any additional libraries if used)
-
-4. Run the Application
-python app.py
-
-
-Open browser and visit:
-
-http://127.0.0.1:5000/
-
-🎯 Use Case
-
-This application can be used for:
-
-Breaking language barriers
-
-Learning and practicing new languages
-
-Demonstrating AI & NLP concepts
-
-Internship and academic projects
-
-🖥️ Interface
+## Interface
 <img width="1883" height="1003" alt="image" src="https://github.com/user-attachments/assets/55a34398-c2db-46a6-9f10-44ccbd8b7477" /> <img width="1878" height="965" alt="image" src="https://github.com/user-attachments/assets/90c423dc-e8a6-4374-bf4c-95033f9f43a8" />
-👩‍💻 Author
 
-Dhanushri Muthukumaran
-B.Tech – Artificial Intelligence & Data Science
-St. Joseph’s College of Engineering
-
-🙏 Acknowledgements
-
-Internship mentorship and guidance
-
-Open-source AI & NLP libraries
-
-Flask documentation
-
-📜 License
-
-This project is for educational and learning purposes.
+ ##Author
+  Dhanushri Muthukumaran
+  B.Tech – Artificial Intelligence & Data Science
+  St. Joseph’s College of Engineering
