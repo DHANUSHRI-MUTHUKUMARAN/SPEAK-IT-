@@ -29,19 +29,19 @@ SPEAK-IT/
 
 ## How to Run the Project
 
-  1. Clone the Repository
-    git clone https://github.com/DHANUSHRI-MUTHUKUMARAN/SPEAK-IT-.git
+  1. Clone the Repository  
+    git clone https://github.com/DHANUSHRI-MUTHUKUMARAN/SPEAK-IT-.git  
     cd SPEAK-IT-  
   
-  3. Create Virtual Environment
-    python -m venv venv
-    Activate it:
-    Windows
-      venv\Scripts\activate
-    Mac / Linux
-      source venv/bin/activate
+  3. Create Virtual Environment  
+    python -m venv venv  
+    Activate it:  
+    Windows  
+      venv\Scripts\activate  
+    Mac / Linux  
+      source venv/bin/activate  
 
-  5. Install Dependencies
+  5. Install Dependencies  
     pip install flask  
     (Install any additional libraries if used)  
     
