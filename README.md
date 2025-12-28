@@ -18,14 +18,14 @@ SPEAK-IT is an AI-powered language translation application that enables real-tim
 - Version Control: Git & GitHub
 
 ## Project Structure
-SPEAK-IT/
-│
-├── app.py                 # Main Flask application
-├── translator.py          # Translation logic
-├── templates/
-│   └── index.html         # Frontend UI
-├── .gitignore
-├── README.md
+SPEAK-IT/  
+│  
+├── app.py                 # Main Flask application  
+├── translator.py          # Translation logic  
+├── templates/  
+│   └── index.html         # Frontend UI  
+├── .gitignore  
+├── README.md  
 
 ## How to Run the Project
 
