@@ -1,8 +1,8 @@
-SPEAK-IT – AI Language Translator
+## SPEAK-IT – AI Language Translator
 
 SPEAK-IT is an AI-powered language translation application that enables real-time text translation between multiple languages through a simple, user-friendly interface. The application is built using Python and Flask, and integrates AI-based translation models to deliver accurate and efficient translations.
 
-✨ Features
+## Features
 
 Real-time text translation
 
