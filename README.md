@@ -31,24 +31,24 @@ SPEAK-IT/
 
   1. Clone the Repository
     git clone https://github.com/DHANUSHRI-MUTHUKUMARAN/SPEAK-IT-.git
-    cd SPEAK-IT-
+    cd SPEAK-IT-  
   
-  2. Create Virtual Environment
+  3. Create Virtual Environment
     python -m venv venv
     Activate it:
     Windows
       venv\Scripts\activate
     Mac / Linux
       source venv/bin/activate
-  
-  3. Install Dependencies
-    pip install flask
-    (Install any additional libraries if used)
+
+  5. Install Dependencies
+    pip install flask  
+    (Install any additional libraries if used)  
     
-  4. Run the Application
-    python app.py
-    Open browser and visit:
-      http://127.0.0.1:5000/
+  7. Run the Application  
+    python app.py  
+    Open browser and visit:  
+      http://127.0.0.1:5000/  
 
 ## Use Case
 
@@ -67,6 +67,6 @@ SPEAK-IT/
 
 
 ## Author
-  Dhanushri Muthukumaran
-  B.Tech – Artificial Intelligence & Data Science
-  St. Joseph’s College of Engineering
+  Dhanushri Muthukumaran  
+  B.Tech – Artificial Intelligence & Data Science  
+  St. Joseph’s College of Engineering  
